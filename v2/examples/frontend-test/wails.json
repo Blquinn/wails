@@ -1,0 +1,13 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "frontend-test",
+  "outputfilename": "frontend-test",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "author": {
+    "name": "Benjamin Quinn",
+    "email": "benjamin.quinn92@gmail.com"
+  }
+}
