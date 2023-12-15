@@ -240,16 +240,6 @@ func (f *Frontend) Show() {
 	C.Window_show(f.qWindow.window)
 }
 
-// MenuSetApplicationMenu implements frontend.Frontend.
-func (f *Frontend) MenuSetApplicationMenu(menu *menu.Menu) {
-	f.logger.Info("MenuSetApplicationMenu")
-}
-
-// MenuUpdateApplicationMenu implements frontend.Frontend.
-func (f *Frontend) MenuUpdateApplicationMenu() {
-	f.logger.Info("MenuUpdateApplicationMenu")
-}
-
 // MessageDialog implements frontend.Frontend.
 func (f *Frontend) MessageDialog(dialogOptions frontend.MessageDialogOptions) (string, error) {
 	f.logger.Info("MessageDialog")
@@ -522,21 +512,6 @@ func (f *Frontend) WindowSetBackgroundColour(col *options.RGBA) {
 	C.Window_set_background_color(f.qWindow.window, cColor)
 }
 
-// WindowSetDarkTheme implements frontend.Frontend.
-func (f *Frontend) WindowSetDarkTheme() {
-	f.logger.Info("WindowSetDarkTheme")
-}
-
-// WindowSetLightTheme implements frontend.Frontend.
-func (f *Frontend) WindowSetLightTheme() {
-	f.logger.Info("WindowSetLightTheme")
-}
-
-// WindowSetSystemDefaultTheme implements frontend.Frontend.
-func (f *Frontend) WindowSetSystemDefaultTheme() {
-	f.logger.Info("WindowSetSystemDefaultTheme")
-}
-
 // WindowSetMaxSize implements frontend.Frontend.
 func (f *Frontend) WindowSetMaxSize(width int, height int) {
 	f.logger.Info("WindowSetMaxSize")
@@ -591,6 +566,33 @@ func (f *Frontend) WindowUnmaximise() {
 func (f *Frontend) WindowUnminimise() {
 	f.logger.Info("WindowUnminimize")
 	C.Window_unminimize(f.qWindow.window)
+}
+
+// TODO: Unimplemented Methods Below
+
+// WindowSetDarkTheme implements frontend.Frontend.
+func (f *Frontend) WindowSetDarkTheme() {
+	f.logger.Info("WindowSetDarkTheme")
+}
+
+// WindowSetLightTheme implements frontend.Frontend.
+func (f *Frontend) WindowSetLightTheme() {
+	f.logger.Info("WindowSetLightTheme")
+}
+
+// WindowSetSystemDefaultTheme implements frontend.Frontend.
+func (f *Frontend) WindowSetSystemDefaultTheme() {
+	f.logger.Info("WindowSetSystemDefaultTheme")
+}
+
+// MenuSetApplicationMenu implements frontend.Frontend.
+func (f *Frontend) MenuSetApplicationMenu(menu *menu.Menu) {
+	f.logger.Info("MenuSetApplicationMenu")
+}
+
+// MenuUpdateApplicationMenu implements frontend.Frontend.
+func (f *Frontend) MenuUpdateApplicationMenu() {
+	f.logger.Info("MenuUpdateApplicationMenu")
 }
 
 var _ frontend.Frontend = &Frontend{}
