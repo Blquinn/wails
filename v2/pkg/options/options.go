@@ -28,8 +28,7 @@ const (
 	Fullscreen WindowStartState = 3
 )
 
-type Experimental struct {
-}
+type Experimental struct{}
 
 // App contains options for creating the App
 type App struct {
@@ -64,6 +63,7 @@ type App struct {
 	OnShutdown         func(ctx context.Context)                `json:"-"`
 	OnBeforeClose      func(ctx context.Context) (prevent bool) `json:"-"`
 	Bind               []interface{}
+	EnumBind           []interface{}
 	WindowStartState   WindowStartState
 
 	// ErrorFormatter overrides the formatting of errors returned by backend methods
